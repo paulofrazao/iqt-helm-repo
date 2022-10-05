@@ -1,2 +1,2 @@
-# itq-helm-repo
+# iqt-helm-repo
 Helm Repo
