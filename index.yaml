@@ -20,24 +20,21 @@ entries:
     urls:
     - https://raw.githubusercontent.com/paulofrazao/iqt-helm-repo/main/mccp-0.9.5.tgz
     version: 0.9.5
-  ingress:
+  ingress-nginx:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-10-05T14:46:28.986444211-04:00"
+    created: "2022-10-12T14:46:28.986444211-04:00"
     dependencies:
-    - condition: cluster-controller.enabled
-      name: cluster-controller
-      repository: file://../cluster-controller
-      version: 1.0.0
-    - condition: policy-agent.enabled
-      name: policy-agent
-      repository: https://weaveworks.github.io/policy-agent
-      version: 1.1.0
-    description: A Helm chart for Kubernetes
-    digest: 5be01bb0b41f65ab4f7c524e1a84283aa0aeebc7cc0c2e882faa2aacba4853d1
-    name: mccp
+    - name: ingress-nginx
+      version: "4.2.5"
+      repository: "https://kubernetes.github.io/ingress-nginx"
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    description: A Weaveworks Helm chart for ingress-nginx
+    digest: 
+    name: ingress-nginx
     type: application
     urls:
-    - https://raw.githubusercontent.com/paulofrazao/iqt-helm-repo/main/**5.tgz
-    version: 0.9.5
+    - https://kubernetes.github.io/ingress-nginx
+    version: 0.0.12
 generated: "2022-10-05T14:46:28.983761391-04:00"
+
