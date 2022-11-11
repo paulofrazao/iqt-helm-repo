@@ -12,9 +12,9 @@ entries:
     - condition: policy-agent.enabled
       name: policy-agent
       repository: https://weaveworks.github.io/policy-agent
-      version: 1.1.0
+      version: 1.2.1
     description: A Helm chart for Kubernetes
-    digest: 5be01bb0b41f65ab4f7c524e1a84283aa0aeebc7cc0c2e882faa2aacba4853d1
+    digest: 8b1f961e65240dae122a63a796a9461fbc9b4740b92e20d6a002c0659144cbfb
     name: mccp
     type: application
     urls:
