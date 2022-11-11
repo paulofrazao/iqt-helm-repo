@@ -18,7 +18,7 @@ entries:
     name: mccp
     type: application
     urls:
-    - https://raw.githubusercontent.com/paulofrazao/iqt-helm-repo/main/mccp-0.9.6.tgz
-    version: 0.9.6
+    - https://raw.githubusercontent.com/paulofrazao/iqt-helm-repo/main/mccp-0.10.1.tgz
+    version: 0.10.1
 generated: "2022-10-05T14:46:28.983761391-04:00"
 
