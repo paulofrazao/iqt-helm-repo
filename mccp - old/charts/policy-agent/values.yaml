@@ -1,0 +1,25 @@
+
+image: weaveworks/policy-agent
+failurePolicy: Ignore
+
+# If you don't want to use cert-manager, set useCertManager to false and provide your own certs
+useCertManager: true
+certificate: ""
+key: ""
+caCertificate: ""
+
+persistence:
+  enabled: false
+  # claimStorage: 1Gi
+  # storageClassName: standard
+
+config:
+  accountId: ""
+  clusterId: ""
+  admission:
+    enabled: true
+    sinks:
+      k8sEventsSink:
+        enabled: true
+  audit:
+    enabled: false
