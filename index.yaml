@@ -3,7 +3,7 @@ entries:
   mccp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-10-05T14:46:28.986444211-04:00"
+    created: "2022-10-20T18:16:17.265426092Z"
     dependencies:
     - condition: cluster-controller.enabled
       name: cluster-controller
@@ -20,4 +20,28 @@ entries:
     urls:
     - https://raw.githubusercontent.com/paulofrazao/iqt-helm-repo/main/mccp-0.10.1.tgz
     version: 0.10.1
-generated: "2022-10-05T14:46:28.983761391-04:00"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-15T15:14:23.180936949Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 2.1.1
+    - condition: enablePipelines
+      name: pipeline-controller
+      repository: oci://ghcr.io/weaveworks/charts
+      version: 0.0.11
+    description: A Helm chart for Kubernetes
+    digest: 6c8fbc4a764b98f0302f5738ff1b54fce4158fabc3d0c7319db6c256ed3b8778
+    name: mccp
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/paulofrazao/iqt-helm-repo/main/mccp-0.10.2.tgz
+    version: 0.10.2
+
+

@@ -1,0 +1,18 @@
+caCertificate: ""
+certificate: ""
+config:
+  accountId: ""
+  admission:
+    enabled: true
+    sinks:
+      k8sEventsSink:
+        enabled: true
+  audit:
+    enabled: false
+  clusterId: ""
+failurePolicy: Fail
+image: weaveworks/policy-agent
+key: ""
+persistence:
+  enabled: false
+useCertManager: true

@@ -7,8 +7,8 @@ nameOverride: ""
 fullnameOverride: ""
 
 images:
-  clustersService: docker.io/weaveworks/weave-gitops-enterprise-clusters-service:v0.10.2
-  uiServer: docker.io/weaveworks/weave-gitops-enterprise-ui-server:v0.10.2
+  clustersService: docker.io/weaveworks/weave-gitops-enterprise-clusters-service:v0.10.1
+  uiServer: docker.io/weaveworks/weave-gitops-enterprise-ui-server:v0.10.1
   clusterBootstrapController: weaveworks/cluster-bootstrap-controller:v0.3.0
 
 serviceAccount:

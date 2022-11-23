@@ -1,0 +1,103 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "mccp.fullname" . }}-cluster-service
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    {{- include "mccp.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clusters-service
+  template:
+    metadata:
+      labels:
+        app: clusters-service
+        {{- include "mccp.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "mccp.serviceAccountName" . }}
+      initContainers:
+      - name: mount-ui-server
+        image: {{ .Values.images.uiServer }}
+        volumeMounts:
+        - mountPath: /target
+          name: ui-server-volume
+      containers:
+        - name: clusters-service
+          image: {{ .Values.images.clustersService }}
+          imagePullPolicy: IfNotPresent
+          envFrom:
+          - configMapRef:
+              name: {{ include "mccp.fullname" . }}-cluster-service
+          - secretRef:
+              name: git-provider-credentials
+              optional: true
+          {{- if .Values.extraEnvVarsSecret }}
+          - secretRef:
+              name: {{ include "common.tplvalues.render" (dict "value" .Values.extraEnvVarsSecret "context" $) }}
+          {{- end }}
+          env:
+            - name: RUNTIME_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            {{- if .Values.config.oidc.enabled }}
+            - name: OIDC_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.config.oidc.clientCredentialsSecret }}
+                  key: clientID
+            - name: OIDC_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.config.oidc.clientCredentialsSecret }}
+                  key: clientSecret
+            {{- end }}
+            {{- if .Values.listOCIRepositories }}
+            - name: WEAVE_GITOPS_FEATURE_OCI_REPOSITORIES
+              value: "true"
+            {{- end }}
+            {{- if .Values.enablePipelines }}
+            - name: WEAVE_GITOPS_FEATURE_PIPELINES
+              value: "true"
+            {{- end }}
+            {{- if .Values.enableTerraformUI }}
+            - name: WEAVE_GITOPS_FEATURE_TERRAFORM_UI
+              value: "true"
+            {{- end }}
+            {{- if .Values.envVars }}
+            {{- with .Values.envVars }}
+              {{- toYaml . | nindent 12 }}
+            {{- end }}
+            {{- end }}
+            {{- if .Values.extraEnvVars }}
+            {{- with .Values.extraEnvVars }}
+              {{- toYaml . | nindent 12 }}
+            {{- end }}
+            {{- end }}
+          volumeMounts:
+            - name: ui-server-volume
+              mountPath: /html
+            {{- if .Values.tls.secretName }}
+            - name: clusters-service-tls-volume
+              mountPath: /etc/clusters-service-tls
+            {{- end }}
+            {{- if .Values.config.extraVolumeMounts }}
+            {{- include "common.tplvalues.render" (dict "value" .Values.config.extraVolumeMounts "context" $) | nindent 12 }}
+            {{- end }}
+      volumes:
+      {{- if .Values.tls.secretName }}
+      - name: clusters-service-tls-volume
+        secret:
+          secretName: {{ .Values.tls.secretName }}
+      {{- end }}
+      - name: ui-server-volume
+        emptyDir: {}
+      {{- if .Values.config.extraVolumes }}
+      {{- include "common.tplvalues.render" (dict "value" .Values.config.extraVolumes  "context" $) | nindent 6 }}
+      {{- end }}
