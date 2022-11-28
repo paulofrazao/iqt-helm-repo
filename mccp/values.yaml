@@ -7,8 +7,8 @@ nameOverride: ""
 fullnameOverride: ""
 
 images:
-  clustersService: docker.io/weaveworks/weave-gitops-enterprise-clusters-service:v0.10.2
-  uiServer: docker.io/weaveworks/weave-gitops-enterprise-ui-server:v0.10.2
+  clustersService: docker.io/weaveworks/weave-gitops-enterprise-clusters-service:v0.11.0
+  uiServer: docker.io/weaveworks/weave-gitops-enterprise-ui-server:v0.11.0
   clusterBootstrapController: weaveworks/cluster-bootstrap-controller:v0.3.0
 
 serviceAccount:
@@ -25,10 +25,13 @@ serviceAccount:
 listOCIRepositories: false
 
 # Turns on pipelines features if set to true. This includes the UI elements.
-enablePipelines: false
+enablePipelines: true
 
 # Turns on UI elements for Terraform objects
 enableTerraformUI: false
+
+# Turns on UI elements for GitOps Run
+enableRunUI: false
 
 config:
   cluster:

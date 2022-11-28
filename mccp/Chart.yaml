@@ -16,4 +16,4 @@ dependencies:
 description: A Helm chart for Kubernetes
 name: mccp
 type: application
-version: 0.10.2
+version: 0.11.0

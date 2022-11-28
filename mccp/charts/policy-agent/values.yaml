@@ -10,6 +10,7 @@ config:
   audit:
     enabled: false
   clusterId: ""
+excludeNamespaces: null
 failurePolicy: Fail
 image: weaveworks/policy-agent
 key: ""
