@@ -14,7 +14,7 @@ entries:
       repository: https://weaveworks.github.io/policy-agent
       version: 1.2.1
     description: A Helm chart for Kubernetes
-    digest: 8b1f961e65240dae122a63a796a9461fbc9b4740b92e20d6a002c0659144cbfb
+    digest: 63073b0364430ed9e9ad450dd2d090f787ccac2e781eeaff3a8051648df1fe6a
     name: mccp
     type: application
     urls:
@@ -66,5 +66,3 @@ entries:
     urls:
     - https://raw.githubusercontent.com/paulofrazao/iqt-helm-repo/main/mccp-0.11.0.tgz
     version: 0.11.0
-
-
