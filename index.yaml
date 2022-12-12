@@ -3,7 +3,26 @@ entries:
   mccp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-10-05T14:46:28.986444211-04:00"
+    created: "2022-10-20T18:16:17.265426092Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 1.2.1
+    description: A Helm chart for Kubernetes
+    digest: 8b1f961e65240dae122a63a796a9461fbc9b4740b92e20d6a002c0659144cbfb
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-10.0.0-rc.1.tgz
+    version: 10.0.0-rc.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-12-09T09:46:02.896854523Z"
     dependencies:
     - condition: cluster-controller.enabled
       name: cluster-controller
@@ -13,6 +32,33 @@ entries:
       name: policy-agent
       repository: https://weaveworks.github.io/policy-agent
       version: 2.1.1
+    - condition: enablePipelines
+      name: pipeline-controller
+      repository: oci://ghcr.io/weaveworks/charts
+      version: 0.7.0
+    description: A Helm chart for Kubernetes
+    digest: 5e6da9c0ac9bc12c6802066e3750609fdffed1f4a094c89dc4ff77420ea70f98
+    name: mccp
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/paulofrazao/iqt-helm-repo/main/mccp-0.12.0.tgz
+    version: 0.12.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-25T12:40:22.909342389Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 2.1.1
+    - condition: enablePipelines
+      name: pipeline-controller
+      repository: oci://ghcr.io/weaveworks/charts
+      version: 0.0.11
     description: A Helm chart for Kubernetes
     digest: a923d7412a1077faa882c3815624a85a2987c23ddba0ac756d9cede8c5804ea5
     name: mccp
@@ -20,4 +66,808 @@ entries:
     urls:
     - https://raw.githubusercontent.com/paulofrazao/iqt-helm-repo/main/mccp-0.11.0.tgz
     version: 0.11.0
-generated: "2022-10-05T14:46:28.983761391-04:00"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-18T15:34:13.821039468Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 2.1.1
+    - condition: enablePipelines
+      name: pipeline-controller
+      repository: oci://ghcr.io/weaveworks/charts
+      version: 0.0.11
+    description: A Helm chart for Kubernetes
+    digest: 2dc8047886655416b9d98d947d0fa5ced690432dbfa030602e97c0af7abb356a
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.10.3-rc.1.tgz
+    version: 0.10.3-rc.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-15T15:14:23.180936949Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 2.1.1
+    - condition: enablePipelines
+      name: pipeline-controller
+      repository: oci://ghcr.io/weaveworks/charts
+      version: 0.0.11
+    description: A Helm chart for Kubernetes
+    digest: 6c8fbc4a764b98f0302f5738ff1b54fce4158fabc3d0c7319db6c256ed3b8778
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.10.2.tgz
+    version: 0.10.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-10T15:03:22.838855948Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 2.0.0
+    - condition: enablePipelines
+      name: pipeline-controller
+      repository: oci://ghcr.io/weaveworks/charts
+      version: 0.0.9
+    description: A Helm chart for Kubernetes
+    digest: 63073b0364430ed9e9ad450dd2d090f787ccac2e781eeaff3a8051648df1fe6a
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.10.1.tgz
+    version: 0.10.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-03T12:21:13.25444097Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 1.2.1
+    - condition: enablePipelines
+      name: pipeline-controller
+      repository: oci://ghcr.io/weaveworks/charts
+      version: 0.0.2
+    description: A Helm chart for Kubernetes
+    digest: 06587f86dea84675ce5d1dd1b229a4c731e071b1f8a364b55e4401532f95d03c
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.10.1-rc.2.tgz
+    version: 0.10.1-rc.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-10-28T12:38:51.908854982Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 1.2.1
+    description: A Helm chart for Kubernetes
+    digest: 24e9f0aa55365a1a0d84ba0c7bb1863a91b848205925331b359d3864a6f044e2
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.10.1-rc.1.tgz
+    version: 0.10.1-rc.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-10-21T13:05:51.383431173Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 1.2.1
+    description: A Helm chart for Kubernetes
+    digest: 163823ca505c01f5920a1cc54f7d8f238226d92e0d9a253375f482bbd151f4a6
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.10.0-rc.2.tgz
+    version: 0.10.0-rc.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-10-21T09:39:54.021604814Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 1.2.1
+    description: A Helm chart for Kubernetes
+    digest: ed2ff2ddb7859ed6981f753013324e09ab2144eb48ca6e91b443be3326a7ee44
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.10.0-rc.1.tgz
+    version: 0.10.0-rc.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-10-17T12:12:37.70616886Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 1.2.1
+    description: A Helm chart for Kubernetes
+    digest: 377d67e3d4710525cc459c88368a9293b8087c8a79b60752531fdd6bf36cedf0
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.6.tgz
+    version: 0.9.6
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-10-12T13:54:25.109260778Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 1.2.1
+    description: A Helm chart for Kubernetes
+    digest: ef137e84d73f8d15858414b7410a0474e3df41d6186d8b9ed90f2b2255d27e7c
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.6-rc.1.tgz
+    version: 0.9.6-rc.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-09-22T14:12:56.369791081Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 1.1.0
+    description: A Helm chart for Kubernetes
+    digest: 5be01bb0b41f65ab4f7c524e1a84283aa0aeebc7cc0c2e882faa2aacba4853d1
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.5.tgz
+    version: 0.9.5
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-09-20T11:13:01.879658738Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 0.4.3
+    description: A Helm chart for Kubernetes
+    digest: e48f0bd7e6933b88d71dae54da1a382781c7be7c32a277465dbe57e0bcb01761
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.5-rc.1.tgz
+    version: 0.9.5-rc.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-09-12T16:04:13.146210137Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 0.4.3
+    description: A Helm chart for Kubernetes
+    digest: b86af74c4f1fed8ab0dd5a35756068a409b37784abcbdd0cf4792e8d26764b3e
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.4.tgz
+    version: 0.9.4
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-09-01T16:03:21.33719537Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 0.4.3
+    description: A Helm chart for Kubernetes
+    digest: 97755a68a7032057b484e86817d4a110ed06953539df624588bec8c5bbb4d191
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.4-rc.2.tgz
+    version: 0.9.4-rc.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-26T12:30:45.522872611Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 0.4.3
+    description: A Helm chart for Kubernetes
+    digest: 5e1c7ccc96b7192a747abeb020ad63174e0c5753066bd9dc3f823c3d425160b0
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.4-rc.1.tgz
+    version: 0.9.4-rc.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-19T11:40:12.863431408Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - condition: policy-agent.enabled
+      name: policy-agent
+      repository: https://weaveworks.github.io/policy-agent
+      version: 0.4.3
+    description: A Helm chart for Kubernetes
+    digest: 04b96f2bd3c7c30232a870ea3f2f9070cac50b0dd65803bc47c083f8f4242fdf
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.3.tgz
+    version: 0.9.3
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-11T11:33:34.777922068Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: c41819b553b2675ff22d15f230de8c9f2c55d6a86ab54dcf33431efa3f0e2def
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.2-rc.1.tgz
+    version: 0.9.2-rc.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-07-29T15:42:22.885559067Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: cf5cad7cc93c56bc0cfaf9af5a21a718f8fe3e9afa7c87d349a3bec1c413485a
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.1.tgz
+    version: 0.9.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-07-27T08:14:56.494744498Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: fc22ecb720cc6a822fc90b5b1df84cca6dd2e40f4bf8831fdd22a12baaa090b4
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.0-rc.5.tgz
+    version: 0.9.0-rc.5
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-07-18T10:38:53.08348506Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: ff9a834830f13379211adba39d0125c7c83f3ff1d5571c99b2e32b2800e22e2d
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.0-rc.4.tgz
+    version: 0.9.0-rc.4
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-07-05T15:37:29.187751912Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: e8b29a4d7a28affb72b07be8ed9a6c5ed8d650812386e0cd4ebdc61e4bb477c1
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.0-rc.3.tgz
+    version: 0.9.0-rc.3
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-07-05T13:41:48.036587145Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: cbb59781636057edebd5aafeae6fa8797c105c0d7e15d69af4eeaa3d3d45ce5f
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.0-rc.2.tgz
+    version: 0.9.0-rc.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-07-04T12:45:58.230347848Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: 03388d8f5167de9cc0821958828f013d5cbd3dd777e85026a9522c076ad3b26b
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.9.0-rc.1.tgz
+    version: 0.9.0-rc.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-06-14T14:33:16.576953128Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: 1fc776316e1adadf6624865ac45b394d87557f2697520bc5c1e34aac9c3a0a7c
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.8.1.tgz
+    version: 0.8.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-06-03T11:15:45.568369125Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: 4903e2fcc639bf9fe416a61cd21cfcd4769f1b966928e7f0d557b4dbfbf2f0a1
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.8.1-rc.3.tgz
+    version: 0.8.1-rc.3
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-05-31T15:02:21.876966812Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: debfaf3e4e861d947e6a6d28222cadd44fa011ee7d935afd0a2ed3d0a070bcb2
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.8.1-rc.2.tgz
+    version: 0.8.1-rc.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-05-11T09:37:25.477503853Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    description: A Helm chart for Kubernetes
+    digest: 827f1d505943db66b0f5a66b7ca3ef09db92ab3fb4f02cc61d7ed0b320e3f5ec
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.8.1-rc.1.tgz
+    version: 0.8.1-rc.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-05-03T13:26:58.798453743Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    description: A Helm chart for Kubernetes
+    digest: 1a9814bb8db7c24aa27b17c4c7acb02e85aefc8eeecb224bfd6c4a0168dcc4f8
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.8.0-rc.1.tgz
+    version: 0.8.0-rc.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-04-29T11:59:03.05149586Z"
+    dependencies:
+    - condition: cluster-controller.enabled
+      name: cluster-controller
+      repository: file://../cluster-controller
+      version: 1.0.0
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    description: A Helm chart for Kubernetes
+    digest: 5c7b9139c04c85894fc6b9e42c20082cdb641b7b8dd5ab3e5a5d417c1721ee7c
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.7.0-rc.2.tgz
+    version: 0.7.0-rc.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-04-26T14:51:37.755900288Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    description: A Helm chart for Kubernetes
+    digest: 35b50950c3755ef4c1614739ff4acf6716f6a8530351ce158cb62201e99db3fb
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.7.0-rc.1.tgz
+    version: 0.7.0-rc.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-04-04T14:40:48.230137273Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    description: A Helm chart for Kubernetes
+    digest: 10a412d8826c3cb86832c219cc5a9118e436eba48a86d2b55e31dfc6daaa4452
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.20.tgz
+    version: 0.0.20
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-02-03T13:08:28.578953164Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.6.21
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 399ef592c6a325262e9b12b90cef384ae06ce978673174a818e3d54a2a0f9045
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.19.tgz
+    version: 0.0.19
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-02-01T12:08:53.322316909Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.6.21
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: aaa9b8eb9d96868695f23cf5d26c14b745b3caafeee87926fed9943de0d75acf
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.18.tgz
+    version: 0.0.18
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-12-17T08:02:54.341885027Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.7
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: c70391cc8a816cb9ff77c460b141dcf262856928cf7a45fc694cabcb7484ba4a
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.17.tgz
+    version: 0.0.17
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-04-04T12:31:22.825582349Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    description: A Helm chart for Kubernetes
+    digest: 4c900c0b02b20e5f594278f7ba7a546ac81d4165d7cf3962737f69a89c9fcd92
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.17-112-g96e0ed9.tgz
+    version: 0.0.17-112-g96e0ed9
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-11-24T18:21:42.490463952Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.7
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 9d51b88bb8026ecab3285791f5b0b8326aff57fa5b0e8944070c189263811735
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.16.tgz
+    version: 0.0.16
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-11-16T11:24:22.586084768Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.7
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 93478913eaf084da9837e6f5d79b28ccdc5150cdf7e3444c7854e7ddf5dbbfae
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.15.tgz
+    version: 0.0.15
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-11-09T15:05:57.753053252Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.7
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 09f588c535a50423cd72804ad48283941e0dec66e693dfb0cc870deb781b0d30
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.14.tgz
+    version: 0.0.14
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-10-28T15:27:56.847368545Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.7
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 89f8fa0e8ffc248b382fe8a00f7a1cc4dc61cd7ac7ea85769957755b0f4e4e05
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.13.tgz
+    version: 0.0.13
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-10-28T14:28:49.998110572Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.7
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 943dd51fb1e8750b54a518411e5bd137ec8e81a78c12a54eaeee5f7ccfebc639
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.12.tgz
+    version: 0.0.12
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-10-05T15:30:39.037022268Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.7
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 5e1e868f427051def5ad09c7b3daf4e2af317f3d0d5256ad8368929d2579f2cf
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.11.tgz
+    version: 0.0.11
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-10-29T08:02:25.343976829Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.7
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 83c3d81ab5304e2ae0798de85803b818aed5d0c15274f553b6877220d1100196
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.11-30-g1869cb6.tgz
+    version: 0.0.11-30-g1869cb6
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-09-24T14:54:48.657989028Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.7
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+    description: A Helm chart for Kubernetes
+    digest: e61673efd7b18965d6c4ada5c888a7762dcaef14e572ba27679fbf257289c88d
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.10.tgz
+    version: 0.0.10
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-09-23T15:59:50.053858415Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.7
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+    description: A Helm chart for Kubernetes
+    digest: e3e1fc416d02bd76fb06462ce986d171641d1dbd1b8e7c69b48523f1ce4d1dae
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.9.tgz
+    version: 0.0.9
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-09-22T10:19:06.467671131Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.2
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.7
+    - name: wkp-ui
+      repository: file://../../ui/chart/wkp-ui
+    description: A Helm chart for Kubernetes
+    digest: 4875b3d4e227eba4c8119c8159aed06e2fbbded40635fdb1863e16601ee21edb
+    name: mccp
+    type: application
+    urls:
+    - https://s3.us-east-1.amazonaws.com/weaveworks-wkp/releases/charts-v3/mccp-0.0.7-26-g738a2ff.tgz
+    version: 0.0.7-26-g738a2ff
+generated: "2022-12-09T09:46:02.892050829Z"
