@@ -7,8 +7,8 @@ nameOverride: ""
 fullnameOverride: ""
 
 images:
-  clustersService: docker.io/weaveworks/weave-gitops-enterprise-clusters-service:v0.13.0
-  uiServer: docker.io/weaveworks/weave-gitops-enterprise-ui-server:v0.13.0
+  clustersService: docker.io/weaveworks/weave-gitops-enterprise-clusters-service:v0.15.0-rc.2
+  uiServer: docker.io/weaveworks/weave-gitops-enterprise-ui-server:v0.15.0-rc.2
   clusterBootstrapController: weaveworks/cluster-bootstrap-controller:v0.3.0
 
 serviceAccount:
@@ -62,6 +62,8 @@ config:
     claimGroups: ""
     # Name of secret in flux-system namespace that contains a clientId and clientSecret
     clientCredentialsSecret: ""
+    # Customise the requested scopes for then OIDC authentication flow - openid will always be requested
+    customScopes: ""
   auth:
     userAccount:
       enabled: true
