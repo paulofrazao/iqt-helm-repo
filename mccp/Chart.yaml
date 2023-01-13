@@ -16,8 +16,8 @@ dependencies:
 - condition: enablePipelines
   name: pipeline-controller
   repository: oci://ghcr.io/weaveworks/charts
-  version: 0.14.0
+  version: 0.8.0
 description: A Helm chart for Kubernetes
 name: mccp
 type: application
-version: 0.15.0-rc.2
+version: 0.13.0
