@@ -1,32 +1,53 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  #  Removed `-controller-manager` suffix to simplify name
-  name: {{ include "cluster-controller.fullname" . }}
+  name: {{ include "gitopssets-controller.fullname" . }}-controller-manager
   labels:
-  {{- include "cluster-controller.labels" . | nindent 4 }}
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: gitopssets-controller
+    app.kubernetes.io/part-of: gitopssets-controller
+  {{- include "gitopssets-controller.labels" . | nindent 4 }}
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "cluster-controller.fullname" . }}
+  name: {{ include "gitopssets-controller.fullname" . }}-controller-manager
   labels:
+    app.kubernetes.io/component: manager
+    app.kubernetes.io/created-by: gitopssets-controller
+    app.kubernetes.io/part-of: gitopssets-controller
     control-plane: controller-manager
-  {{- include "cluster-controller.labels" . | nindent 4 }}
+  {{- include "gitopssets-controller.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.controllerManager.replicas }}
   selector:
     matchLabels:
       control-plane: controller-manager
-    {{- include "cluster-controller.selectorLabels" . | nindent 6 }}
+    {{- include "gitopssets-controller.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
         control-plane: controller-manager
-      {{- include "cluster-controller.selectorLabels" . | nindent 8 }}
+      {{- include "gitopssets-controller.selectorLabels" . | nindent 8 }}
       annotations:
         kubectl.kubernetes.io/default-container: manager
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+                - arm64
+                - ppc64le
+                - s390x
+              - key: kubernetes.io/os
+                operator: In
+                values:
+                - linux
       containers:
       - args:
         - --secure-listen-address=0.0.0.0:8443
@@ -45,11 +66,15 @@ spec:
           protocol: TCP
         resources: {{- toYaml .Values.controllerManager.kubeRbacProxy.resources | nindent
           10 }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
       - args:
         - --health-probe-bind-address=:8081
         - --metrics-bind-address=127.0.0.1:8080
         - --leader-elect
-        - --capi-enabled={{ .Values.global.capiEnabled }}
         command:
         - /manager
         env:
@@ -74,7 +99,10 @@ spec:
           }}
         securityContext:
           allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
       securityContext:
         runAsNonRoot: true
-      serviceAccountName: {{ include "cluster-controller.fullname" . }}
+      serviceAccountName: {{ include "gitopssets-controller.fullname" . }}-controller-manager
       terminationGracePeriodSeconds: 10

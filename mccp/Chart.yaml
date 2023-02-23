@@ -8,7 +8,7 @@ dependencies:
 - condition: templates-controller.enabled
   name: templates-controller
   repository: file://../templates-controller
-  version: 0.1.0
+  version: 0.1.1
 - condition: policy-agent.enabled
   name: policy-agent
   repository: https://weaveworks.github.io/policy-agent
@@ -17,7 +17,11 @@ dependencies:
   name: pipeline-controller
   repository: oci://ghcr.io/weaveworks/charts
   version: 0.14.0
+- condition: gitopssets-controller.enabled
+  name: gitopssets-controller
+  repository: file://../gitopssets-controller
+  version: 0.1.0
 description: A Helm chart for Kubernetes
 name: mccp
 type: application
-version: 0.15.0-rc.2
+version: 0.17.0
